@@ -137,6 +137,11 @@
 
 \newcommand{\profilesection}[2]{\vspace{8pt}{\color{black!80} \huge #1 \rule[0.15\baselineskip]{#2}{1pt}}}
 
+% Size of the name at the top of the sidebar. A long name runs past the sidebar
+% edge at \Huge; drop it to \huge in the document with
+% \renewcommand{\namefont}{\huge}
+\newcommand{\namefont}{\Huge}
+
 % Define custom commands for CV info
 \newcommand{\cvdate}[1]{\renewcommand{\cvdate}{#1}}
 \newcommand{\cvlinkedin}[1]{\renewcommand{\cvlinkedin}{#1}}
@@ -192,7 +197,7 @@
     %------------------------------------------------
     
         \vspace{1mm}
-    {\Huge\color{pblue}\cvname}
+    {\namefont\color{pblue}\cvname}
     
     \vspace{2mm}
 
@@ -213,7 +218,7 @@
               $} 
             & \cvnumberphone\\}
             
-      \ifthenelse{\equal{\href{\cvsite}{\cvsite}}{}}{}{
+      \ifthenelse{\equal{\cvsite}{}}{}{
             {$
               \begin{array}{l}
               \hspace{2.8mm} \huge \textnormal{\textcolor{test}{\faGlobe}}
@@ -250,7 +255,7 @@
               \hspace{4mm} \huge \textnormal{\textcolor{mainblue}{\faMapMarker}}
               \end{array}
               $}
-            & \cvaddress \\}
+            & \parbox[t]{5cm}{\raggedright\cvaddress} \\}
 
     \end{tabular}
 
