@@ -22,7 +22,7 @@ jobs:
         with:
           root_file: cv.tex
           latexmk_use_xelatex: true
-          args: -pdfxe -interaction=nonstopmode -halt-on-error -file-line-error
+          args: -file-line-error -halt-on-error -interaction=nonstopmode
 
       - name: Upload PDF
         uses: actions/upload-artifact@v7
