@@ -1,0 +1,11 @@
+build/
+.claude/
+
+# LaTeX build artefacts, in case anything is compiled in place
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.xdv
+*.synctex.gz

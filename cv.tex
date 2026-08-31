@@ -1,0 +1,191 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Twenty Seconds Resume/CV
+% LaTeX Template
+% Version 1.0 (14/7/16)
+%
+% Original author:
+% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by 
+% Vel (vel@LaTeXTemplates.com) and Harsh (harsh.gadgil@gmail.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper]{twentysecondcv} % a4paper for A4
+
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+
+% Command for printing skill overview bubbles
+\newcommand\skills{ 
+~
+	\smartdiagram[bubble diagram]{
+        \textbf{~~~~~~Cyber~~~~~~~}\\\textbf{~~~~~~Security~~~~~~~},
+        \textbf{~~~~Network~~~~~}\\\textbf{~~~~Security~~~~~},
+        \textbf{~Software~}\\\textbf{~Development~},
+        \textbf{~~Machine~~}\\\textbf{~~Learning~~},
+        \textbf{~~~OS Security~~~}\\\textbf{/ Linux}
+    }
+}
+
+% Soft Skills
+\soft{Management}{Collaboration}{Documentation}{Teaching}
+
+% Education
+\education{
+\textbf{Computer Science Continuing\\ Education} \\
+Courses in Network Security and \\
+Cryptography, Machine Learning, Data and Algorithmic Foundations \\
+RWTH Aachen, Germany \\
+04/2022 - 03/2024
+
+\textbf{MSc., Automation Engineering} (\textbf{Grade: 1.4}) \\
+Specialization: Embedded Programming \\
+RWTH Aachen, Germany \\
+04/2019 - 01/2022
+
+\textbf{Erasmus Semester Abroad - Norway}\\
+Lectures about System Development and Programming \\
+Norwegian University of Science and Technology, Trondheim \\
+07/2017 - 12/2017
+
+\textbf{BSc., Mechanical Engineering} (\textbf{Grade: 2.0}) \\
+Specialization: Programming and Control \\
+Leibniz University Hannover, Germany \\
+10/2014 - 12/2018
+
+\textbf{Abitur} (\textbf{Grade: 1.2}) \\
+Leibnizschule Hannover, Germany \\
+2014
+
+\small{\textit{(1.0=A, 5.0=F)}}
+}
+
+%----------------------------------------------------------------------------------------
+%	 PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+% If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
+
+\cvname{Frederik Berg} % Your name
+\cvjobtitle{Cybersecurity Analytics} % Job title/career
+
+% Leave any of these empty to hide the line in the sidebar
+\cvlinkedin{} % LinkedIn handle, without the URL
+\cvgithub{} % GitHub username
+\cvnumberphone{} % Phone number
+\cvaddress{} % Postal address
+\cvsite{frederikberg.com} % Personal website
+\cvmail{fberg@posteo.de} % Email address
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makeprofile % Print the sidebar
+
+\section{Bio}
+I am currently working as a Security Analytics Consultant at \textbf{SVA System Vertrieb Alexander GmbH}. Previously, I was a Research Assistant at \textbf{RWTH} Aachen University, where my research focused on the \textbf{safety} of embedded medical devices. Over time, my interest has increasingly shifted towards \textbf{cybersecurity}, a field of high impact and \textbf{crucial} importance in which I am now actively engaged. My strengths include a strong \textbf{motivation to learn}, the ability to solve \textbf{complex problems}, exceptional \textbf{organizational} skills, and a commitment to producing well-\textbf{documented work}.
+ 
+%----------------------------------------------------------------------------------------
+%	 EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Experience}
+
+\begin{twenty} % Environment for a list with descriptions
+    \twentyitem
+        {09/2023 -}
+        {03/2024}
+        {Cybersecurity Certifications and Upskilling}
+        {RWTH Aachen, Germany}
+        {}
+        {\begin{itemize}
+            \item Lecture: Network security and cryptography
+            \item Certificates: Google Professional Cybersecurity Certificate, TryHackMe, (CompTIA Security+ Certificate in progress) (\href{https://frederikberg.com/news/it-sec/}{For more see: Link})
+        \end{itemize}}
+        \\
+    \twentyitem
+        {08/2022 -}
+        {09/2023}
+        {Research Associate in Computer Science}
+        {RWTH Aachen, Germany}
+        {Chair for Embedded Software}
+        {\begin{itemize}
+            \item Conducted research on the functional safety of medical embedded devices.
+            \item Authored multiple publications, including first-author papers. For more details, see: \href{https://scholar.google.com/citations?user=cmAmnmcAAAAJ}{Google Scholar}.
+            \item Supervised a lecture on Advanced Microcontroller Programming and Debugging, focusing on safe and verifiable software.
+            \item Managed projects and supervised students.
+        \end{itemize}}
+        \\
+    \twentyitem
+        {08/2023 -}
+        {09/2023}
+        {Maschine Learning 4 Good (ML4Good)}
+        {Germany}
+        {}
+        {\begin{itemize}
+            \item Participated in AI safety and alignment camp, focusing on ethical applications of machine learning.
+        \end{itemize}}
+        \\
+    \twentyitem
+        {06/2023 -}
+        {11/2023}
+        {Development of a Nextcloud Server App}
+        {Germany}
+        {}
+        {\begin{itemize}
+            \item Developed and published a Nextcloud Server App, leveraging PHP, JavaScript, Vue, and Gitlab CI. (\href{https://gitlab.com/frederikb96/nextcloud-mvsharedpics}{Project Link})
+        \end{itemize}}
+        \\
+    \twentyitem
+        {03/2023 -}
+        {Present}
+        {Effective Altruism Aachen Co-Organizer}
+        {Aachen, Germany}
+        {}
+        {\begin{itemize}
+            \item Coordinating events and participating in conferences and online courses focusing on effective, impactful solutions for global challenges.
+        \end{itemize}}
+        \\
+    \twentyitem
+        {10/2020 -}
+        {08/2022}
+        {Software Development (Student Job)}
+        {RWTH Aachen, Germany}
+        {Chair for Embedded Software}
+        {\begin{itemize}
+            \item Developed software for controlling medical equipment, including a blood pump control system, using C and Matlab.
+        \end{itemize}}
+        \\
+    \twentyitem
+        {04/2019 -}
+        {Present}
+        {Linux Homeserver Development and Security Projects}
+        {Germany}
+        {}
+        {\begin{itemize}
+            \item Established network infrastructures and implemented monitoring and security systems. Engaged in various software development projects using Python and Bash. Actively contributed to open-source software and documentation.
+        \end{itemize}}
+        \\
+    \twentyitem
+        {10/2018 -}
+        {03/2019}
+        {Android App Development (Student Job)}
+        {Hannover, Germany}
+        {Institute of Tansport and Automation Technology}
+        {\begin{itemize}
+            \item Developed an Android camera module application for processing visible light signals, utilizing Java.
+        \end{itemize}}
+        \\
+	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+\end{twenty}
+
+\section{Languages}
+German: Native \hspace{2mm} | \hspace{2mm} English: Fluent
+
+\end{document} 

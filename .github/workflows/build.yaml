@@ -1,0 +1,31 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Compile cv.tex
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: cv.tex
+          latexmk_use_xelatex: true
+          args: -pdfxe -interaction=nonstopmode -halt-on-error -file-line-error
+
+      - name: Upload PDF
+        uses: actions/upload-artifact@v7
+        with:
+          name: cv
+          path: cv.pdf
