@@ -36,7 +36,7 @@ latexmk -pdfxe -interaction=nonstopmode -halt-on-error -output-directory=build c
 
 On Debian or Ubuntu the packages `texlive-xetex`, `texlive-latex-extra`, `texlive-fonts-extra`, `texlive-pictures`, `texlive-pstricks` and `latexmk` cover it. If something is still missing, the error message names the exact `.sty` or `.cls` file it wanted, which is usually enough to find the package. A full TeX Live install is the option that requires no thinking.
 
-Every pull request, and a manual run of the `Build` workflow, also builds the PDF on GitHub Actions and attaches it to the run as a downloadable artifact, so you can get a fresh PDF without a local toolchain at all.
+Every pull request, every push to `main`, and a manual run of the `Build` workflow, also builds the PDF on GitHub Actions and attaches it to the run as a downloadable artifact, so you can get a fresh PDF without a local toolchain at all.
 
 ## Make it yours
 
