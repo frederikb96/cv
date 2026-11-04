@@ -391,7 +391,7 @@
     % specifies which is the distance among the bubble center node and the other bubbles
     distance center/other bubbles = 0.3cm,
     % sets the distance from the text to the border of the bubble center node
-    distance text center bubble = 0.4cm,
+    distance text center bubble = 0.3cm,
     % set center bubble color
     bubble center node color = pblue,
     % define the list of colors usable in the diagram

@@ -26,10 +26,10 @@
 ~
 	\smartdiagram[bubble diagram]{
         \textbf{~~~~~~Cyber~~~~~~~}\\\textbf{~~~~~~Security~~~~~~~},
-        \textbf{~~~~Network~~~~~}\\\textbf{~~~~Security~~~~~},
+        \textbf{~~~~~SIEM /~~~~~}\\\textbf{~~~~~Elastic~~~~~},
         \textbf{~Software~}\\\textbf{~Development~},
-        \textbf{~~Machine~~}\\\textbf{~~Learning~~},
-        \textbf{~~~OS Security~~~}\\\textbf{/ Linux}
+        \textbf{~~~~AI /~~~~}\\\textbf{~~~~ML~~~~},
+        \textbf{~~Kubernetes~~}\\\textbf{/ Linux}
     }
 }
 
@@ -76,7 +76,7 @@ Leibnizschule Hannover, Germany \\
 
 % Leave any of these empty to hide the line in the sidebar
 \cvlinkedin{} % LinkedIn handle, without the URL
-\cvgithub{} % GitHub username
+\cvgithub{frederikb96} % GitHub username
 \cvnumberphone{} % Phone number
 \cvaddress{} % Postal address
 \cvsite{frederikberg.com} % Personal website
@@ -89,8 +89,8 @@ Leibnizschule Hannover, Germany \\
 \makeprofile % Print the sidebar
 
 \section{Bio}
-I am currently working as a Security Analytics Consultant at \textbf{SVA System Vertrieb Alexander GmbH}. Previously, I was a Research Assistant at \textbf{RWTH} Aachen University, where my research focused on the \textbf{safety} of embedded medical devices. Over time, my interest has increasingly shifted towards \textbf{cybersecurity}, a field of high impact and \textbf{crucial} importance in which I am now actively engaged. My strengths include a strong \textbf{motivation to learn}, the ability to solve \textbf{complex problems}, exceptional \textbf{organizational} skills, and a commitment to producing well-\textbf{documented work}.
- 
+I work as a Security Analytics Consultant at \textbf{SVA System Vertrieb Alexander GmbH}, where I build and operate \textbf{SIEM} and \textbf{SOC} platforms on \textbf{Elastic Security}. Before that, I was a Research Associate at \textbf{RWTH} Aachen University, researching the \textbf{safety} of embedded medical devices. I like turning complex systems into \textbf{automated}, well-\textbf{documented} code, I pass on what I know in \textbf{trainings} and talks, and I keep learning through \textbf{certifications} and my own security homelab.
+
 %----------------------------------------------------------------------------------------
 %	 EXPERIENCE
 %----------------------------------------------------------------------------------------
@@ -99,14 +99,26 @@ I am currently working as a Security Analytics Consultant at \textbf{SVA System 
 
 \begin{twenty} % Environment for a list with descriptions
     \twentyitem
-        {09/2023 -}
-        {03/2024}
-        {Cybersecurity Certifications and Upskilling}
-        {RWTH Aachen, Germany}
+        {05/2024 -}
+        {Present}
+        {Security Analytics Consultant}
+        {Aachen, Germany}
+        {SVA System Vertrieb Alexander GmbH}
+        {\begin{itemize}
+            \item Building and operating a fully automated, multi-tenant SOC platform on Elastic Security: everything as code with Terraform, Ansible and CI/CD, detection rules deployed per customer, Fleet and Elastic Defend. Further SIEM and detection engineering projects for customers, including a central vulnerability management platform on Elastic.
+            \item IT security workshops, trainings and talks: sessions and hands-on labs for an IT security bootcamp, and a customer webinar with a live demo of the SOC platform.
+        \end{itemize}}
+        \\
+    \twentyitem
+        {2019 -}
+        {Present}
+        {Security Homelab and Personal Projects}
+        {Germany}
         {}
         {\begin{itemize}
-            \item Lecture: Network security and cryptography
-            \item Certificates: Google Professional Cybersecurity Certificate, TryHackMe, (CompTIA Security+ Certificate in progress) (\href{https://frederikberg.com/news/it-sec/}{For more see: Link})
+            \item Elastic SIEM on my own Kubernetes cluster, configured entirely as code: detection rules over Kubernetes audit logs, network flows and container runtime events, with AI agents that triage alerts and security advisories and operate the cluster.
+            \item A personal AI assistant infrastructure built on Claude Code, with a backend, web and iOS clients, long-term memory and scheduled agents.
+            \item MailVerdict: an open-source, self-hosted mail client in which a language model gives spam verdicts (\href{https://github.com/frederikb96/mail-verdict}{GitHub}).
         \end{itemize}}
         \\
     \twentyitem
@@ -125,65 +137,28 @@ I am currently working as a Security Analytics Consultant at \textbf{SVA System 
     \twentyitem
         {08/2023 -}
         {09/2023}
-        {Maschine Learning 4 Good (ML4Good)}
+        {Machine Learning for Good (ML4Good)}
         {Germany}
         {}
         {\begin{itemize}
-            \item Participated in AI safety and alignment camp, focusing on ethical applications of machine learning.
-        \end{itemize}}
-        \\
-    \twentyitem
-        {06/2023 -}
-        {11/2023}
-        {Development of a Nextcloud Server App}
-        {Germany}
-        {}
-        {\begin{itemize}
-            \item Developed and published a Nextcloud Server App, leveraging PHP, JavaScript, Vue, and Gitlab CI. (\href{https://gitlab.com/frederikb96/nextcloud-mvsharedpics}{Project Link})
+            \item Participated in an AI safety and alignment camp, focusing on ethical applications of machine learning.
         \end{itemize}}
         \\
     \twentyitem
         {03/2023 -}
         {Present}
-        {Effective Altruism Aachen Co-Organizer}
+        {Co-Organizer, Effective Altruism Aachen}
         {Aachen, Germany}
         {}
         {\begin{itemize}
-            \item Coordinating events and participating in conferences and online courses focusing on effective, impactful solutions for global challenges.
-        \end{itemize}}
-        \\
-    \twentyitem
-        {10/2020 -}
-        {08/2022}
-        {Software Development (Student Job)}
-        {RWTH Aachen, Germany}
-        {Chair for Embedded Software}
-        {\begin{itemize}
-            \item Developed software for controlling medical equipment, including a blood pump control system, using C and Matlab.
-        \end{itemize}}
-        \\
-    \twentyitem
-        {04/2019 -}
-        {Present}
-        {Linux Homeserver Development and Security Projects}
-        {Germany}
-        {}
-        {\begin{itemize}
-            \item Established network infrastructures and implemented monitoring and security systems. Engaged in various software development projects using Python and Bash. Actively contributed to open-source software and documentation.
-        \end{itemize}}
-        \\
-    \twentyitem
-        {10/2018 -}
-        {03/2019}
-        {Android App Development (Student Job)}
-        {Hannover, Germany}
-        {Institute of Tansport and Automation Technology}
-        {\begin{itemize}
-            \item Developed an Android camera module application for processing visible light signals, utilizing Java.
+            \item Organizing the local group's meetups and events and looking after its website and newsletter.
         \end{itemize}}
         \\
 	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
 \end{twenty}
+
+\section{Certifications}
+Elastic Certified Engineer, Analyst, Observability Engineer and SIEM Analyst \hspace{1mm}|\hspace{1mm} Certified Kubernetes Application Developer (CKAD) \hspace{1mm}|\hspace{1mm} CompTIA Security+ \hspace{1mm}|\hspace{1mm} Google Cybersecurity Professional Certificate \hspace{1mm}|\hspace{1mm} Tines Core and Advanced
 
 \section{Languages}
 German: Native \hspace{2mm} | \hspace{2mm} English: Fluent
