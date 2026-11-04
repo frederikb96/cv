@@ -6,7 +6,7 @@ My CV, written in LaTeX. It is also a perfectly good starting point for your own
 
 ![Preview](preview.png)
 
-It is a one-page, two-column layout: a grey sidebar with contact details, a skill bubble diagram and education, and a main column with a short bio and a dated experience list. Everything lives in two files — `cv.tex` holds the content, `twentysecondcv.cls` holds the design. Almost certainly you only ever want to touch the first one.
+It is a one-page, two-column layout: a grey sidebar with contact details, a skill bubble diagram and education, and a main column with a short bio, a dated experience list and certifications. `cv.tex` holds the content, `twentysecondcv.cls` holds the design. The experience list and the certification line are in `experience.tex` and `certifications.tex`, which `make` generates from the data files of my [website](https://github.com/frederikb96/frederikberg), so both show the same positions.
 
 ## Use it in Overleaf
 
@@ -25,14 +25,10 @@ Overleaf's TeX Live already has every package this uses, so there is nothing els
 You need a TeX Live installation with `xelatex` and `latexmk`. Then:
 
 ```
-make
-```
-
-That writes intermediate files into `build/` and copies the result to `cv.pdf`. Without `make`, the same thing by hand:
-
-```
 latexmk -pdfxe -interaction=nonstopmode -halt-on-error -output-directory=build cv.tex
 ```
+
+That compiles the committed sources into `build/`. `make` does the same after regenerating `experience.tex` and `certifications.tex`, and copies the result to `cv.pdf`; it also needs `curl` and [Bun](https://bun.sh/). It reads the data files from the website repository's `main` branch by default; `make WEBSITE_DATA=file:///path/to/frederikberg/src/data` uses a local checkout instead.
 
 On Debian or Ubuntu the packages `texlive-xetex`, `texlive-latex-extra`, `texlive-fonts-extra`, `texlive-pictures`, `texlive-pstricks` and `latexmk` cover it. If something is still missing, the error message names the exact `.sty` or `.cls` file it wanted, which is usually enough to find the package. A full TeX Live install is the option that requires no thinking.
 
@@ -46,7 +42,7 @@ The rest of the content is three blocks:
 
 - `\education{...}` — free-form text for the sidebar. Plain paragraphs, `\textbf{}` for the degree line.
 - `\skills` and `\soft{}{}{}{}` — the bubble diagram and the four soft-skill bullets. The diagram takes five labels; the `\\` inside each one is a manual line break, and the padding spaces around the words are how they get centred in their bubble.
-- `\begin{twenty}` — the experience list. Each entry is a `\twentyitem` taking six arguments in order: start date, end date, role, location, sub-line (an employer or department, may be empty), and the body, usually an `itemize`.
+- `experience.tex` — the experience list inside `\begin{twenty}`. Each entry is a `\twentyitem` taking six arguments in order: start date, end date, role, location, sub-line (an employer or department, may be empty), and the body, usually an `itemize`. For your own CV, either edit this file and `certifications.tex` directly and compile with `latexmk`, or point `make` at YAML files of your own in the same shape (`scripts/render-data.ts` reads them).
 
 Two things worth knowing before you rearrange much:
 
